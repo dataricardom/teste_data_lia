@@ -28,6 +28,7 @@ b.Utilizando a resposta do item a, escreva uma consulta para obter, por escola e
 
 Nota: não fornecemos o banco de dados para essa questão, ela pode ser realizada somente com as informações do enunciado. No entanto, se for mais confortável, você pode criar as tabelas com dados fictícios, para facilitar testar seu código.
 
+https://github.com/dataricardom/teste_data_lia/tree/main/quest%C3%A3o_1
 
 
 ### Questão 2.
@@ -37,3 +38,4 @@ Dicas: você pode usar a função COALESCE(value , 0) para substituir um valor n
 
 No arquivo base_dados_questao2.sql, em anexo no email enviado com o link deste forms, está o banco de dados. Recomendo rodar localmente para analisar o conteúdo das tabelas, testar e validar sua consulta.
 
+https://github.com/dataricardom/teste_data_lia/tree/main/quest%C3%A3o_2
