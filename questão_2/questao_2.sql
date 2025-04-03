@@ -1,3 +1,7 @@
+/* 
+Vefificando dados contidos nas tabelas para identificar relacionamentos.
+*/
+
 select * from departamento;
 
 select * from empregado;
@@ -8,6 +12,10 @@ select * from emp_venc;
 
 select * from emp_desc;
 
+
+/*
+Consulta:
+*/
 select d.nome, 
 count(distinct e.lotacao_div) as quantidade_empregados, 
 round(COALESCE(avg(v.valor),0),2) as media_salarial,
@@ -25,7 +33,3 @@ order by avg(v.valor),2) DESC
 
 ;
 
-
-select * from emp_venc;
-
-select * from emp_desc;
