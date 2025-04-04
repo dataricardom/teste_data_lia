@@ -3,8 +3,8 @@
  A) */ 
 
 SELECT s.name AS escola, 
-	count(st.id) AS qtd_alunos, 
-	round(sum(c.price), 2)preco_total_matriculas, 
+	COUNT(st.id) AS qtd_alunos, 
+	ROUND(SUM(c.price), 2)preco_total_matriculas, 
 	st.enrolled_at AS data_matricula
 FROM schools AS s
 LEFT JOIN courses AS c ON s.id = c.school_id
