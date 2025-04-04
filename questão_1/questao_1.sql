@@ -16,7 +16,10 @@ ORDER BY st.enrolled_at DESC ;
 
 /*
 B)
+
+Fazendo uma consulta a partir de uma view criada a partir da consulta da questão A.
 */
+
 
 
 SELECT 
