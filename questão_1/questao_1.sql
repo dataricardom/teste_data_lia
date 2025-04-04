@@ -2,16 +2,16 @@
 
  A) */ 
 
-select s.name as escola, 
-	count(st.id) as qtd_alunos, 
+SELECT s.name AS escola, 
+	count(st.id) AS qtd_alunos, 
 	round(sum(c.price), 2)preco_total_matriculas, 
-	st.enrolled_at as data_matricula
-from schools as s
-left join courses as c on s.id = c.school_id
-left join students as st on st.course_id = c.id
-where c.name like 'Data%'
-group by s.name, st.enrolled_at
-order by st.enrolled_at DESC ;
+	st.enrolled_at AS data_matricula
+FROM schools AS s
+LEFT JOIN courses AS c ON s.id = c.school_id
+LEFT JOIN students AS st ON st.course_id = c.id
+WHERE c.name LIKE 'Data%'
+GROUP BY s.name, st.enrolled_at
+ORDER BY st.enrolled_at DESC ;
 
 
 /*

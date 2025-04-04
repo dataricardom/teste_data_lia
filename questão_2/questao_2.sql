@@ -2,34 +2,33 @@
 Vefificando dados contidos nas tabelas para identificar relacionamentos.
 */
 
-select * from departamento;
+SELECT * FROM departamento;
 
-select * from empregado;
+SELECT * FROM empregado;
 
-select * from vencimento;
+SELECT * FROM vencimento;
 
-select * from emp_venc;
+SELECT * FROM emp_venc;
 
-select * from emp_desc;
+SELECT * FROM emp_desc;
 
 
 /*
 Consulta:
 */
-select d.nome, 
-count(distinct e.lotacao_div) as quantidade_empregados, 
-round(COALESCE(avg(v.valor),0),2) as media_salarial,
-round(COALESCE(max(v.valor),0), 2) as maior_salario,
-round(COALESCE(min(v.valor),0), 2) as menor_salario
-from departamento as d
-join empregado as e
-on d.cod_dep = e.gerencia_cod_dep
-join emp_venc as ev
-on e.matr = ev.matr
-join vencimento as v
-on v.cod_venc = ev.cod_venc
-group by d.nome
-order by avg(v.valor),2) DESC
-
+SELECT d.nome, 
+count(distinct e.lotacao_div) AS quantidade_empregados, 
+round(COALESCE(avg(v.valor),0),2) AS media_salarial,
+round(COALESCE(max(v.valor),0), 2) AS maior_salario,
+round(COALESCE(min(v.valor),0), 2) AS menor_salario
+FROM departamento AS d
+JOIN empregado AS e
+ON d.cod_dep = e.gerencia_cod_dep
+JOIN emp_venc AS ev
+ON e.matr = ev.matr
+JOIN vencimento AS v
+ON v.cod_venc = ev.cod_venc
+GROUP BY d.nome
+ORDER BY avg(v.valor),2) DESC
 ;
 
